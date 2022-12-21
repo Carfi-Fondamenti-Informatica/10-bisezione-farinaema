@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 
 float function( float y ){
     float f;
@@ -40,7 +39,7 @@ int main(){
         err=abs(((b-a)/2));
 
     } while(err >= (1e-6));
-    
-        std::cout << std::setprecision(3)<< x << std::endl;
+
+        std::cout << x << std::endl;
         return 0;
 }
