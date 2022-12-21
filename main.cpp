@@ -41,6 +41,6 @@ int main(){
 
     } while(err >= (1e-6));
 
-        std::cout << x << std::endl;
+        std::cout << int(x*1000)/1000.0 << std::endl;
         return 0;
 }
