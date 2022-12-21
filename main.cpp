@@ -40,8 +40,8 @@ int main(){
     } while(err >= (1e-6));
 
         func = function(x);
-        std::cout << std::setprecision(4)<< x << std::endl;
-        std::cout << std::setprecision(4) << func <<  std::endl;
+        std::cout << std::setprecision(3)<< x << std::endl;
+        std::cout << std::setprecision(3) << func <<  std::endl;
 
         return 0;
 }
