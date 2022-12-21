@@ -19,15 +19,16 @@ int main(){
 
     do {
 
-        x=(a+b)/2;
+        x=((a+b)/2);
 
         if(function(x)==0) {
 
-            break;
-
+            std::cout << x << std::endl;
+            std::cout << function(x) << std::endl;
+            return 0;
         }
 
-        if ((function(a)*function(b))<0){
+        if (function(a)* function(b)<0){
 
             b=x;
 
