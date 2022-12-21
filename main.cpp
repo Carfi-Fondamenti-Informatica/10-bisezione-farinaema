@@ -3,7 +3,7 @@
 
 double function( double y ){
     double f;
-    f = ((pow(y, 2)*cos(y))+1);
+    f = pow(y, 2)*cos(y)+1;
     return f;
 }
 
@@ -19,7 +19,7 @@ int main(){
 
     do {
 
-        x=((a+b)/2);
+        x=(a+b)/2;
 
         if(function(x)==0) {
 
@@ -28,7 +28,7 @@ int main(){
             return 0;
         }
 
-        if (function(a)* function(b)<0){
+        if (function(x)* function(a)<0){
 
             b=x;
 
@@ -37,10 +37,10 @@ int main(){
             a=x;
         }
 
-        err=std::abs(((b-a)/2));
+        err=std::abs((b-a)/2);
 
     } while(err >= (1e-6));
 
-        std::cout << int(x*1000)/1000.0 << std::endl;
+        std::cout << x << std::endl;
         return 0;
 }
