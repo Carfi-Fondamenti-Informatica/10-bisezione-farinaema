@@ -27,7 +27,7 @@ int main(){
 
         }
 
-        if (function(a)* function(b)<0){
+        if ((function(a)*function(b))<0){
 
             b=x;
 
