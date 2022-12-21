@@ -1,15 +1,15 @@
 #include <iostream>
 #include <cmath>
 
-float function( float y ){
-    float f;
-    f = ((powf(y, 2)*cosf(y))+1);
+double function( double y ){
+    double f;
+    f = ((pow(y, 2)*cos(y))+1);
     return f;
 }
 
 int main(){
 
-    float a=0, b=0, x, err;
+    double a=0, b=0, x, err;
 
     do{
         std::cout << "inserire estremi" << std::endl;
