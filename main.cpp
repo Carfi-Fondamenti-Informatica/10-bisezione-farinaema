@@ -3,13 +3,13 @@
 
 float function( float y ){
     float f;
-    f = (powf(y, 2)* cosf(y)+1);
+    f = ((powf(y, 2)*cosf(y))+1);
     return f;
 }
 
 int main(){
 
-    float a=0, b=0, x=0, err, func;
+    float a=0, b=0, x, err;
 
     do{
         std::cout << "inserire estremi" << std::endl;
@@ -36,7 +36,7 @@ int main(){
             a=x;
         }
 
-        err=abs(((b-a)/2));
+        err=std::abs(((b-a)/2));
 
     } while(err >= (1e-6));
 
