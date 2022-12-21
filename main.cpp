@@ -20,7 +20,7 @@ int main(){
 
     do {
 
-        x=(a+b)/2;
+        a=(a+b)/2;
 
         if(function(x)==0) {
 
@@ -35,9 +35,9 @@ int main(){
             a=x;
         }
 
-        err= ((b-a)/2);
+        err= abs(((b-a)/2));
 
-    } while( err >= (M_E-6));
+    } while(err >= (1e-6));
 
         std::cout << x << std::endl;
         std::cout << function(x) << std::endl;
