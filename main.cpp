@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-float function( float y ){
 
+float function( float y ){
     float f;
     f = (powf(y, 2)* cosf(y)+1);
     return f;
@@ -26,7 +26,9 @@ int main(){
 
             break;
 
-        } else if (function(a)* function(b)<0){
+        }
+
+        if (function(a)* function(b)<0){
 
             b=x;
 
@@ -38,10 +40,7 @@ int main(){
         err=abs(((b-a)/2));
 
     } while(err >= (1e-6));
-
-        func = function(x);
+    
         std::cout << std::setprecision(3)<< x << std::endl;
-        std::cout << std::setprecision(3) << func <<  std::endl;
-
         return 0;
 }
