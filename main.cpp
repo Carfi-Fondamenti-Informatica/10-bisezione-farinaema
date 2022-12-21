@@ -1,16 +1,16 @@
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 float function( float y ){
 
-    float f=0;
+    float f;
     f = (powf(y, 2)* cosf(y)+1);
     return f;
 }
 
 int main(){
 
-    float a=0, b=0, x=0, err=1;
+    float a=0, b=0, x=0, err, func;
 
     do{
         std::cout << "inserire estremi" << std::endl;
@@ -20,7 +20,7 @@ int main(){
 
     do {
 
-        a=(a+b)/2;
+        x=(a+b)/2;
 
         if(function(x)==0) {
 
@@ -35,11 +35,13 @@ int main(){
             a=x;
         }
 
-        err=((b-a)/2);
+        err=abs(((b-a)/2));
 
     } while(err >= (1e-6));
 
-        std::cout << x << std::endl;
-        std::cout << function(x) << std::endl;
+        func = function(x);
+        std::cout << std::setprecision(4)<< x << std::endl;
+        std::cout << std::setprecision(4) << func <<  std::endl;
 
+        return 0;
 }
